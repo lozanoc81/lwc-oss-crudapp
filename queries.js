@@ -13,9 +13,15 @@ var db = pgp(connectionString);
 function getAllIdentidades(req, res, next) {
     db.any('select * from identidad')
         .then(function(data) {
+            let elementos = [];
+            data.forEach(e => {
+                e.visible = false;
+                elementos.push(e.id);
+            });
             res.status(200).json({
                 status: 'success',
                 data: data,
+                elementos: elementos,
                 message: 'Retrieved ALL Identidades'
             });
         })

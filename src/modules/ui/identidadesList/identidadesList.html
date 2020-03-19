@@ -1,22 +1,23 @@
 <template>
+    Identidades List
     <nav class="nav" role="navigation">
         <ul class="nav__list">
-            <template for:each={navItems} for:item="navItem">
-                <li key={navItem.title}>
+            <template for:each={identidades} for:item="navItem">
+                <li key={navItem.nombre}>
                     <input
-                        id={navItem.title}
+                        id={navItem.nombre}
                         type="checkbox"
                         checked=""
                         hidden=""
                     />
-                    <label for={navItem.title}>
+                    <label for={navItem.nombre}>
                         <a
                             href="#"
-                            title={navItem.title}
-                            data-item={navItem.value}
+                            title={navItem.nombre}
+                            data-item={navItem.id}
                             onclick={handleNavItemClick}
                         >
-                            {navItem.title}
+                            {navItem.nombre}
                         </a>
                     </label>
                 </li>

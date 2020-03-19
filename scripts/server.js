@@ -2,7 +2,6 @@
 const compression = require('compression');
 const helmet = require('helmet');
 const express = require('express');
-const bodyParser = require('body-parser');
 
 const dotenv = require('dotenv');
 dotenv.config();

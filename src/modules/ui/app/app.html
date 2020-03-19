@@ -1,15 +1,13 @@
 <template>
     <section class="content container page-background">
-        <ui-navbar
-            nav-items={navigationItems}
-            selected-item={currentNavigationItem}
-            oncategorychange={handleCategoryChange}
-        >
-        </ui-navbar>
+        <ui-identidades-list
+            selected-item="1"
+            onidentidadchange={handleIdentidadChange}
+        ></ui-identidades-list>
 
         <article class="container">
             <div>
-                <recipe-hello></recipe-hello>
+                <ui-identidad-item></ui-identidad-item>
             </div>
         </article>
     </section>
