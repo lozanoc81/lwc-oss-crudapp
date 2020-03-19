@@ -1,8 +1,8 @@
 {
-    "name": "lwc-recipes-oss",
+    "name": "corguzleo-lwc-demointegrationfinancial",
     "version": "0.2.0",
     "author": "Salesforce Developer Evangelism",
-    "bugs": "https://github.com/trailheadapps/lwc-recipes-oss/issues",
+    "bugs": "https://github.com/corguzleo/lwc-demointegrationfinancial/issues",
     "dependencies": {
         "chart.js": "^2.9.3",
         "compression": "^1.7.4",
@@ -12,7 +12,7 @@
         "moment": "^2.24.0",
         "lwc-recipes-oss-ui-components": "^0.3.1"
     },
-    "description": "Lightning Web Components Recipes Open Source",
+    "description": "corguzleo lwc-demointegrationfinancial",
     "devDependencies": {
         "@salesforce/wire-service-jest-util": "^2.3.0",
         "husky": "^4.2.3",
@@ -23,7 +23,7 @@
     "engines": {
         "node": ">=10.0.0"
     },
-    "homepage": "https://github.com/trailheadapps/lwc-recipes-oss",
+    "homepage": "https://github.com/corguzleo/lwc-demointegrationfinancial",
     "husky": {
         "hooks": {
             "pre-commit": "lint-staged"
@@ -41,7 +41,7 @@
             "eslint"
         ]
     },
-    "repository": "trailheadapps/lwc-recipes-oss",
+    "repository": "corguzleo/lwc-demointegrationfinancial",
     "scripts": {
         "build": "lwc-services build --mode production",
         "build:development": "lwc-services build",

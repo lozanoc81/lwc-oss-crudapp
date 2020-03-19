@@ -1,7 +1,7 @@
 {
-    "name": "lwc-recipes-oss",
-    "description": "Config for Heroku Pipelines and Review Apps",
-    "repository": "https://github.com/trailheadapps/lwc-recipes-oss",
+    "name": "corguzleo lwc-demointegrationfinancial",
+    "description": "lwc demointegrationfinancial",
+    "repository": "https://github.com/corguzleo/lwc-demointegrationfinancial",
     "scripts": {},
     "env": {
         "NODE_ENV": {

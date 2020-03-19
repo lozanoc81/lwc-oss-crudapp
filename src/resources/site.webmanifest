@@ -6,8 +6,8 @@
         "type": "image/png",
         "sizes": "512x512"
     }],
-    "name": "Lightning Web Components Recipes",
-    "short_name": "LWC Recipes",
+    "name": "Lightning Web Components Demo Integration Financial",
+    "short_name": "LWC Demo Integration Financial",
     "start_url": "/#hello",
     "theme_color": "#fff"
 }
