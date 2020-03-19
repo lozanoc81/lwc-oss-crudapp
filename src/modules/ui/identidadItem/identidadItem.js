@@ -53,5 +53,36 @@ export default class IdentidadItem extends LightningElement {
             });
     }
 
-    updateIdentidad() {}
+    nuevaIdentidad() {
+        this.currentItem = undefined;
+        this.item = {};
+    }
+
+    updateIdentidad() {
+        let URL = '/api/identidades/' + this.currentItem;
+        let METHOD = 'PUT';
+        if (undefined === this.currentItem) {
+            METHOD = 'POST';
+            URL = '/api/identidades';
+        }
+        fetch(URL, {
+            method: METHOD,
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(this.item)
+        })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('No response from server');
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log('Success:', data);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+    }
 }

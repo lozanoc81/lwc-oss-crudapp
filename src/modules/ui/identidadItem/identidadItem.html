@@ -2,9 +2,7 @@
     <template if:true={item}>
         <ui-card title="IdentidadItem">
             <div>
-                <label>Id</label>
-                <ui-output value={item.id}> </ui-output>
-
+                <ui-button onclick={nuevaIdentidad} label="Nuevo"></ui-button>
                 <ui-input
                     type="higgen"
                     name="id"
@@ -49,6 +47,10 @@
                     value={item.vigente}
                     onchange={handleChange}
                 ></ui-input>
+                <ui-button
+                    onclick={updateIdentidad}
+                    label="Guardar"
+                ></ui-button>
             </div>
         </ui-card>
     </template>
