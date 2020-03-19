@@ -7,7 +7,7 @@ var options = {
 
 var pgp = require('pg-promise')(options);
 var connectionString = process.env.DATABASE_URL;
-console.log('connectionString=' + connectionString);
+//console.log('connectionString=' + connectionString);
 var db = pgp(connectionString);
 
 function getAllIdentidades(req, res, next) {
