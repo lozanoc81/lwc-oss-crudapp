@@ -1,3 +1,55 @@
 <template>
-    IdentidadItem
+    <template if:true={item}>
+        <ui-card title="IdentidadItem">
+            <div>
+                <label>Id</label>
+                <ui-output value={item.id}> </ui-output>
+
+                <ui-input
+                    type="higgen"
+                    name="id"
+                    label="id"
+                    value={item.id}
+                    onchange={handleChange}
+                ></ui-input>
+                <ui-input
+                    name="ine"
+                    label="ine"
+                    value={item.ine}
+                    onchange={handleChange}
+                ></ui-input>
+                <ui-input
+                    name="pasaporte"
+                    label="pasaporte"
+                    value={item.pasaporte}
+                    onchange={handleChange}
+                ></ui-input>
+                <ui-input
+                    name="nombre"
+                    label="Nombre"
+                    value={item.nombre}
+                    onchange={handleChange}
+                ></ui-input>
+                <ui-input
+                    name="apellido_paterno"
+                    label="apellido_paterno"
+                    value={item.apellido_paterno}
+                    onchange={handleChange}
+                ></ui-input>
+                <ui-input
+                    name="apellido_materno"
+                    label="apellido_materno"
+                    value={item.apellido_materno}
+                    onchange={handleChange}
+                ></ui-input>
+                <ui-input
+                    type="checkbox"
+                    name="vigente"
+                    label="vigente"
+                    value={item.vigente}
+                    onchange={handleChange}
+                ></ui-input>
+            </div>
+        </ui-card>
+    </template>
 </template>

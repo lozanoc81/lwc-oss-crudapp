@@ -1,13 +1,15 @@
 <template>
     <section class="content container page-background">
         <ui-identidades-list
-            selected-item="1"
+            selected-item={currentIdentidad}
             onidentidadchange={handleIdentidadChange}
         ></ui-identidades-list>
 
         <article class="container">
             <div>
-                <ui-identidad-item></ui-identidad-item>
+                <ui-identidad-item
+                    selected-item={currentIdentidad}
+                ></ui-identidad-item>
             </div>
         </article>
     </section>

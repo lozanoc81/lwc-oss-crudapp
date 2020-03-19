@@ -13,7 +13,15 @@ export const getIdentidades = () =>
             return identidades;
         });
 export const getIdentidad = identidadId => {
-    return identidades.find(identidad => {
-        return identidad.id === identidadId;
-    });
+    fetch(URL + '/' + identidadId)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('No response from server');
+            }
+            return response.json();
+        })
+        .then(result => {
+            console.log('service getidentidad result.data', result.data);
+            return result.data;
+        });
 };
