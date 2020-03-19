@@ -4,13 +4,17 @@
     "author": "Salesforce Developer Evangelism",
     "bugs": "https://github.com/corguzleo/lwc-demointegrationfinancial/issues",
     "dependencies": {
+        "bluebird": "^3.7.2",
+        "body-parser": "^1.19.0",
         "chart.js": "^2.9.3",
         "compression": "^1.7.4",
         "d3": "^5.15.0",
+        "dotenv": "^8.2.0",
         "express": "^4.17.1",
         "helmet": "^3.21.2",
+        "lwc-recipes-oss-ui-components": "^0.3.1",
         "moment": "^2.24.0",
-        "lwc-recipes-oss-ui-components": "^0.3.1"
+        "pg-promise": "^5.9.7"
     },
     "description": "corguzleo lwc-demointegrationfinancial",
     "devDependencies": {
