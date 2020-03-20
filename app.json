@@ -3,7 +3,7 @@
     "description": "lwc demointegrationfinancial",
     "repository": "https://github.com/corguzleo/lwc-demointegrationfinancial",
     "scripts": {
-        "postdeploy": "node /script/database.js"
+        "postdeploy": "psql $DATABASE_URL -f database.sql"
     },
     "env": {},
     "formation": {
