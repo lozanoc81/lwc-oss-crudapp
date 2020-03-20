@@ -26,6 +26,14 @@ export default class IdentidadesList extends LightningElement {
         });
     }
 
+    @api
+    refresh() {
+        console.log(this.currentIdentidad, this.identidades);
+        getIdentidades().then(result => {
+            this.identidades = this.allIdentidades = result;
+        });
+    }
+
     renderedCallback() {
         if (this._isRendered) return;
         //if (this.currentIdentidad === undefined && this.currentIdentidad == null) this.currentIdentidad="1";

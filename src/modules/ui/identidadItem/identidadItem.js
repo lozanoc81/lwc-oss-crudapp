@@ -4,7 +4,15 @@ export default class IdentidadItem extends LightningElement {
     currentItem;
 
     @track
-    item = {};
+    item = {
+        ine: '',
+        id: '',
+        pasaporte: '',
+        nombre: '',
+        apellido_paterno: '',
+        apellido_materno: '',
+        vigente: false
+    };
 
     @api
     set selectedItem(value) {
@@ -55,7 +63,15 @@ export default class IdentidadItem extends LightningElement {
 
     nuevaIdentidad() {
         this.currentItem = undefined;
-        this.item = {};
+        this.item = {
+            ine: '',
+            id: '',
+            pasaporte: '',
+            nombre: '',
+            apellido_paterno: '',
+            apellido_materno: '',
+            vigente: false
+        };
     }
 
     updateIdentidad() {
@@ -79,6 +95,11 @@ export default class IdentidadItem extends LightningElement {
                 return response.json();
             })
             .then(data => {
+                this.dispatchEvent(
+                    new CustomEvent('updatelist', { detail: METHOD })
+                );
+                // eslint-disable-next-line no-alert
+                alert('Success');
                 console.log('Success:', data);
             })
             .catch(error => {

@@ -15,4 +15,9 @@ export default class App extends LightningElement {
             }
         }
     }
+
+    hadleUpdateList(event) {
+        console.log('hadleUpdateList ', event.detail);
+        this.template.querySelector('ui-identidades-list').refresh();
+    }
 }
