@@ -11,7 +11,7 @@ var connectionString = process.env.DATABASE_URL;
 var db = pgp(connectionString);
 
 function getAllIdentidades(req, res, next) {
-    db.any('select * from identidad')
+    db.any('select * from identidades')
         .then(function(data) {
             let elementos = [];
             data.forEach(e => {
@@ -22,7 +22,7 @@ function getAllIdentidades(req, res, next) {
                 status: 'success',
                 data: data,
                 elementos: elementos,
-                message: 'Retrieved ALL Identidades'
+                message: 'Retrieved ALL identidades'
             });
         })
         .catch(function(err) {
@@ -32,12 +32,12 @@ function getAllIdentidades(req, res, next) {
 
 function getSingleIdentidad(req, res, next) {
     var idenID = parseInt(req.params.id);
-    db.one('select * from identidad where id = $1', idenID)
+    db.one('select * from identidades where id = $1', idenID)
         .then(function(data) {
             res.status(200).json({
                 status: 'success',
                 data: data,
-                message: 'Retrieved ONE Identidad'
+                message: 'Retrieved ONE identidades'
             });
         })
         .catch(function(err) {
@@ -49,14 +49,14 @@ function createIdentidad(req, res, next) {
     console.log('req=' + JSON.stringify(req.body));
     req.body.id = parseInt(req.body.id);
     db.none(
-        'INSERT INTO identidad(id, ine, pasaporte, nombre, apellido_paterno, apellido_materno, vigente) ' +
+        'INSERT INTO identidades(id, ine, pasaporte, nombre, apellido_paterno, apellido_materno, vigente) ' +
             'VALUES(${id}, ${ine}, ${pasaporte}, ${nombre}, ${apellido_paterno}, ${apellido_materno}, ${vigente})',
         req.body
     )
         .then(function() {
             res.status(200).json({
                 status: 'success',
-                message: 'Inserted one Identidad'
+                message: 'Inserted one identidades'
             });
         })
         .catch(function(err) {
@@ -66,7 +66,7 @@ function createIdentidad(req, res, next) {
 
 function updateIdentidad(req, res, next) {
     db.none(
-        'update identidad set ine=$1, pasaporte=$2, nombre=$3, apellido_paterno=$4, apellido_materno=$5, vigente=$6 where id=$7',
+        'update identidades set ine=$1, pasaporte=$2, nombre=$3, apellido_paterno=$4, apellido_materno=$5, vigente=$6 where id=$7',
         [
             req.body.ine,
             req.body.pasaporte,
@@ -80,7 +80,7 @@ function updateIdentidad(req, res, next) {
         .then(function() {
             res.status(200).json({
                 status: 'success',
-                message: 'Updated Identidad'
+                message: 'Updated identidades'
             });
         })
         .catch(function(err) {
@@ -90,12 +90,12 @@ function updateIdentidad(req, res, next) {
 
 function removeIdentidad(req, res, next) {
     var idenID = parseInt(req.params.id);
-    db.result('delete from identidad where id = $1', idenID)
+    db.result('delete from identidades where id = $1', idenID)
         .then(function(result) {
             /* jshint ignore:start */
             res.status(200).json({
                 status: 'success',
-                message: `Removed ${result.rowCount} Identidad`
+                message: `Removed ${result.rowCount} identidades`
             });
             /* jshint ignore:end */
         })
