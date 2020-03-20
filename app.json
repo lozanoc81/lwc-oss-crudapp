@@ -2,18 +2,16 @@
     "name": "corguzleo lwc-demointegrationfinancial",
     "description": "lwc demointegrationfinancial",
     "repository": "https://github.com/corguzleo/lwc-demointegrationfinancial",
-    "scripts": {},
-    "env": {
-        "NODE_ENV": {
-            "required": true
-        }
+    "scripts": {
+        "postdeploy": "node script/database.js"
     },
+    "env": {},
     "formation": {
         "web": {
             "quantity": 1
         }
     },
-    "addons": [],
+    "addons": ["heroku-postgresql:hobby-dev"],
     "buildpacks": [
         {
             "url": "heroku/nodejs"
