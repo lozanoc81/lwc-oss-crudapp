@@ -1,4 +1,4 @@
-# Lightning Web Components Open Source Demo Integracion
+# Lightning Web Components Open Source Demo CRUD App
 
 ## Deploy to Heroku
 
@@ -8,11 +8,11 @@ If you want to deploy to Heroku - there's a button for that.
 
 ## Local Development
 
-1. Clone the `lwc-demointegrationfinancial` repository:
+1. Clone the `lwc-oss-crudapp` repository:
 
 ```
-git clone https://github.com/corguzleo/lwc-demointegrationfinancial
-cd lwc-demointegrationfinancial
+git clone https://github.com/corguzleo/lwc-oss-crudapp.git
+cd lwc-oss-crudapp
 ```
 
 2. Install the project dependencies using `yarn` (or `npm`, if you prefer that alternatively)

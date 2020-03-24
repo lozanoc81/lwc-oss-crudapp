@@ -1,8 +1,8 @@
 {
-    "name": "corguzleo-lwc-demointegrationfinancial",
+    "name": "corguzleo-lwc-oss-crudapp",
     "version": "0.2.0",
     "author": "Salesforce Developer Evangelism",
-    "bugs": "https://github.com/corguzleo/lwc-demointegrationfinancial/issues",
+    "bugs": "https://github.com/corguzleo/lwc-oss-crudapp/issues",
     "dependencies": {
         "bluebird": "^3.7.2",
         "body-parser": "^1.19.0",
@@ -16,7 +16,7 @@
         "moment": "^2.24.0",
         "pg-promise": "^5.9.7"
     },
-    "description": "corguzleo lwc-demointegrationfinancial",
+    "description": "corguzleo lwc-oss-crudapp",
     "devDependencies": {
         "@salesforce/wire-service-jest-util": "^2.3.0",
         "husky": "^4.2.3",
@@ -27,7 +27,7 @@
     "engines": {
         "node": ">=10.0.0"
     },
-    "homepage": "https://github.com/corguzleo/lwc-demointegrationfinancial",
+    "homepage": "https://github.com/corguzleo/lwc-oss-crudapp",
     "husky": {
         "hooks": {
             "pre-commit": "lint-staged"
@@ -45,7 +45,7 @@
             "eslint"
         ]
     },
-    "repository": "corguzleo/lwc-demointegrationfinancial",
+    "repository": "corguzleo/lwc-oss-crudapp",
     "scripts": {
         "build": "lwc-services build --mode production",
         "build:development": "lwc-services build",
