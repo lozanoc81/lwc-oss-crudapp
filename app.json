@@ -1,7 +1,7 @@
 {
-    "name": "corguzleo lwc-demointegrationfinancial",
-    "description": "lwc demointegrationfinancial",
-    "repository": "https://github.com/corguzleo/lwc-demointegrationfinancial",
+    "name": "corguzleo lwc-oss-crudapp",
+    "description": "lwc oss crud app",
+    "repository": "https://github.com/corguzleo/lwc-oss-crudapp",
     "scripts": {
         "postdeploy": "psql $DATABASE_URL -f database.sql"
     },
