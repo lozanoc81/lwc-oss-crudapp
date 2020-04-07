@@ -6,6 +6,9 @@ If you want to deploy to Heroku - there's a button for that.
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
+![Screen Shot](ScreenShot01.png?raw=true)
+
+
 ## Local Development
 
 1. Clone the `lwc-oss-crudapp` repository:
